@@ -1,0 +1,65 @@
+/* Genel stil ayarları */
+.navbar {
+  width: 100%;
+  background-color: #1f1f1f; /* Koyu arka plan */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  color: #f39c12; /* Turuncu renk */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-link svg {
+  width: 1.8rem; /* İkon genişliği */
+  height: 1.8rem; /* İkon yüksekliği */
+  margin-bottom: 5px; /* İkon ile yazı arasında boşluk */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover svg {
+  fill: #e67e22; /* Hover efekti için daha koyu turuncu */
+}
+
+.nav-link:hover {
+  color: #e67e22; /* Hoverda yazı rengi değişir */
+}
+
+.nav-link.active {
+  color: #007bff; /* Seçili menü için mavi renk */
+}
+
+.nav-link:hover .active {
+  color: #0056b3;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+  .nav-item {
+    margin: 0 10px;
+  }
+}

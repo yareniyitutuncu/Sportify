@@ -1,0 +1,168 @@
+/* Takvim Konteyneri */
+.calendar-container {
+  background-color: #1f1f1f; /* Koyu gri arka plan */
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  margin-top: 130px;
+}
+
+/* Ay ve Yıl Seçici */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-header select {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Takvim Grid Yapısı */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 sütunlu grid */
+  gap: 10px;
+  justify-items: center;
+}
+
+/* Gün Kutuları */
+.calendar-day {
+  background-color: #2c2c2c; /* Koyu gri kutu */
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-day:hover {
+  background-color: #f39c12; /* Hoverda turuncu */
+  transform: scale(1.1);
+}
+
+.calendar-day.selected {
+  background-color: #f39c12; /* Seçili gün için turuncu */
+}
+
+/* Görev Ekleme Durumu */
+.calendar-day.has-task {
+  background-color: #c8581c; /* Görev eklenen günler yeşil olur */
+}
+
+.calendar-day.has-task:hover {
+  background-color: #e18256; /* Hoverda daha açık yeşil */
+}
+
+/* Günün Görev Listesi */
+.to-do-list {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.to-do-list h3 {
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.to-do-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.to-do-list li {
+  color: white;
+  font-size: 1rem;
+  padding: 5px 0;
+}
+
+.to-do-list li.completed {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+/* Yeni Görev Ekleme Alanı */
+.task-input {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.task-input input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.task-input button {
+  width: 20%;
+  padding: 10px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.task-input button:hover {
+  background-color: #e67e22;
+}
+
+/* Task silme butonunun stili */
+.delete-btn {
+  background-color: #e74c3c; /* Kırmızı arka plan */
+  color: white;
+  font-size: 1.5rem; /* Buton yazı boyutu */
+  padding: 1px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 10px; /* Buton ile görev arasına boşluk ekledik */
+}
+
+.delete-btn:hover {
+  background-color: #c0392b; /* Hoverda daha koyu kırmızı */
+  transform: scale(1.1); /* Hoverda buton biraz büyür */
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .calendar-container {
+    padding: 20px;
+  }
+
+  .calendar-header {
+    flex-direction: column;
+  }
+
+  .calendar-day {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}

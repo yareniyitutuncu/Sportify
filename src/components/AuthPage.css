@@ -1,0 +1,104 @@
+/* Genel Stil Ayarları */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Sayfanın tamamını kaplasın */
+  width: 100vw; /* Sayfanın tamamını kaplasın */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Yedek arka plan rengi */
+}
+
+/* Auth Sayfa Konteynerı */
+.auth-container {
+  height: 100vh; /* Sayfa yüksekliğini tam kaplar */
+  width: 80vw; /* Sayfa genişliğini tam kaplar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background: url('../assets/arkaplan.png') no-repeat center center fixed; /* Arka plan görseli */
+  background-size: 1000px; /* Görselin tüm alanı kaplamasını sağlar */
+  background-position: center center; /* Görseli ortalar */
+  color: white; /* Metin rengi */
+}
+
+/* Auth İçerik Alanı */
+.auth-content {
+  text-align: center; /* İçeriği ortala */
+  width: 100%; /* Yatayda genişlik */
+  max-width: 400px; /* İçeriğin genişliği */
+  background: rgba(0, 0, 0, 0.6); /* Yarı saydam arka plan */
+  padding: 20px; /* İçerik çevresi boşluğu */
+  border-radius: 10px; /* Yuvarlatılmış köşeler */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+}
+
+/* Başlık */
+.auth-title {
+  font-size: 2.5rem; /* Başlık boyutu */
+  margin-bottom: 20px; /* Başlık alt boşluğu */
+  color: #ffa500; /* Turuncu renk */
+}
+
+/* Input Alanları */
+.auth-input {
+  width: 100%; /* Tam genişlik */
+  padding: 12px; /* İç boşluk */
+  margin: 10px 0; /* Üst ve alt boşluk */
+  border-radius: 5px; /* Yuvarlatılmış köşeler */
+  border: none; /* Kenarlık kaldır */
+  font-size: 1rem; /* Yazı boyutu */
+  background-color: white; /* Arka plan rengi */
+  color: #333; /* Yazı rengi */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+.auth-input:focus {
+  outline: none; /* Kenar odak stilini kaldır */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Daha belirgin odak gölgesi */
+}
+
+/* Sign Up Butonu */
+.auth-button {
+  background-color: #ffa500; /* Turuncu buton rengi */
+  color: white; /* Buton yazı rengi */
+  border: none; /* Kenarlık kaldır */
+  padding: 10px 20px; /* Buton iç boşluk */
+  margin-top: 20px; /* Buton üst boşluğu */
+  border-radius: 5px; /* Yuvarlatılmış köşeler */
+  font-size: 1rem; /* Yazı boyutu */
+  cursor: pointer; /* İşaretçi değişimi */
+  transition: 0.3s; /* Geçiş efekti */
+}
+
+.auth-button:hover {
+  background-color: #cc8400; /* Koyu turuncu */
+}
+
+/* Diğer Bağlantılar */
+.auth-toggle,
+.auth-forgot-password,
+.auth-back {
+  color: #ffa500; /* Turuncu yazı rengi */
+  cursor: pointer; /* İşaretçi değişimi */
+  text-decoration: underline; /* Altı çizili */
+  margin-top: 10px; /* Üst boşluk */
+}
+
+/* Mesajlar */
+.auth-message {
+  margin-top: 10px; /* Üst boşluk */
+  color: white; /* Yazı rengi */
+  background: rgba(0, 0, 0, 0.5); /* Yarı saydam arka plan */
+  padding: 10px; /* İç boşluk */
+  border-radius: 5px; /* Yuvarlatılmış köşeler */
+  text-align: center; /* Metni ortala */
+}

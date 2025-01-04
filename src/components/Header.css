@@ -1,0 +1,109 @@
+/* Header Konteyneri */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f1f1f; /* Koyu arka plan */
+  color: rgb(76, 74, 74);
+  padding: 10px 20px;
+  position: fixed; /* Header'ı sabitliyoruz */
+  top: 0;
+  left: 0;
+  right: 0; /* Header yatayda tüm ekranı kaplayacak */
+  z-index: 1000; /* Diğer içeriklerin üstünde olmasını sağlar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+}
+
+/* Logo Konteyneri */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 120px; /* Logo boyutu */
+  height: auto;
+}
+
+/* Sağdaki bölümdeki butonlar */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Notification Butonu */
+.notification-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 20px; /* Notification butonunun sol tarafına boşluk */
+}
+
+.notification-btn:hover {
+  color: #f39c12;
+}
+
+/* Bildirim Dropdown Menü */
+.notifications-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.notification-item {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+/* Back Butonu (Sadece Activity, Calendar, Profile sayfalarında gösterilecek) */
+.back-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 20px; /* Back butonunun sağında boşluk */
+}
+
+.back-btn:hover {
+  color: #f39c12;
+}
+
+/* Body için margin-top veriyoruz ki içerik header'ın altında başlasın */
+body {
+  margin-top: 80px; /* Header'ın yüksekliğinden daha fazla boşluk bırak */
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+.header-container {
+  padding: 10px;
+}
+
+.header-title {
+  font-size: 1.2rem;
+}
+
+.logo-img {
+  width: 100px;
+}
+
+.notification-btn {
+  font-size: 1.3rem;
+}
+}
