@@ -1,0 +1,53 @@
+/* Egzersiz bilgileri kutusu */
+.exercise-info {
+    background: #f8f9fa;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+/* Kamera ve Egzersiz Görselleri için Ortak Stil */
+.media-box {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+
+/* Egzersiz Alanı */
+.exercise-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Kamera ve Görsel Alanı */
+.exercise-display {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Exercise Tamamlama Butonu */
+.exercise-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.exercise-btn:hover {
+    background-color: #28a745; /* Önceki hover rengi */
+}

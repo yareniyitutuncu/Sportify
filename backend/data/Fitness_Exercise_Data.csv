@@ -1,0 +1,40 @@
+FitnessLevel,Goal,TargetArea,Exercise,Sets,Reps
+Beginner,Strength Building,Legs,Squat,3,14
+Intermediate,Strength Building,Legs,Squat,2,10
+Advanced,Strength Building,Legs,Squat,3,7
+Beginner,Strength Building,Arms,Push-Up,2,10
+Intermediate,Strength Building,Arms,Push-Up,5,13
+Advanced,Strength Building,Arms,Push-Up,3,5
+Beginner,Strength Building,Back,Deadlift,3,12
+Intermediate,Strength Building,Back,Deadlift,3,13
+Advanced,Strength Building,Back,Deadlift,4,10
+Beginner,Strength Building,Arms,Shoulder Press,4,15
+Intermediate,Strength Building,Arms,Shoulder Press,3,7
+Advanced,Strength Building,Arms,Shoulder Press,2,15
+Beginner,Muscle Gain,Legs,Side Lunge,2,6
+Intermediate,Muscle Gain,Legs,Side Lunge,2,6
+Advanced,Muscle Gain,Legs,Side Lunge,4,6
+Beginner,Muscle Gain,Abs,Plank,5,13
+Intermediate,Muscle Gain,Abs,Plank,5,8
+Advanced,Muscle Gain,Abs,Plank,3,5
+Beginner,Flexibility Enhancement,Back,Bridge,3,7
+Intermediate,Flexibility Enhancement,Back,Bridge,3,8
+Advanced,Flexibility Enhancement,Back,Bridge,3,13
+Beginner,Flexibility Enhancement,Legs,Standing Toe Touch,5,14
+Intermediate,Flexibility Enhancement,Legs,Standing Toe Touch,3,14
+Advanced,Flexibility Enhancement,Legs,Standing Toe Touch,4,9
+Beginner,Endurance Improvement,Arms,Triceps Dip,4,6
+Intermediate,Endurance Improvement,Arms,Triceps Dip,2,6
+Advanced,Endurance Improvement,Arms,Triceps Dip,5,5
+Beginner,Endurance Improvement,Legs,Calf Raise,3,10
+Intermediate,Endurance Improvement,Legs,Calf Raise,5,10
+Advanced,Endurance Improvement,Legs,Calf Raise,5,12
+Beginner,Strength Building,Arms,Arm Raise,4,5
+Intermediate,Strength Building,Arms,Arm Raise,4,7
+Advanced,Strength Building,Arms,Arm Raise,5,7
+Beginner,Muscle Gain,Abs,Side Plank,5,9
+Intermediate,Muscle Gain,Abs,Side Plank,2,10
+Advanced,Muscle Gain,Abs,Side Plank,2,6
+Beginner,Flexibility Enhancement,Abs,Leg Raise,3,15
+Intermediate,Flexibility Enhancement,Abs,Leg Raise,5,14
+Advanced,Flexibility Enhancement,Abs,Leg Raise,2,14
