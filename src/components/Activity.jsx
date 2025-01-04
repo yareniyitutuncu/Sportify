@@ -23,14 +23,7 @@ const Activity = () => {
           </button>
         </div>
 
-        <div className="progress-section">
-          <h2>Progress</h2>
-          <p>Track your progress and see how much you've improved!</p>
-          <div className="progress-bar">
-            <div className="progress-fill" style={{ width: '50%' }}></div>
-          </div>
-          <p className="progress-text">50% completed</p>
-        </div>
+        
       </div>
     </div>
   );
