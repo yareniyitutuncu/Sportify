@@ -11,6 +11,7 @@ const AuthPage = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
   const [isForgotPassword, setIsForgotPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // Parola görünürlük kontrolü için state ekliyoruz
 
   // E-posta doğrulama fonksiyonu
   const isValidEmail = (email) => {
@@ -96,21 +97,39 @@ const AuthPage = () => {
         />
         {!isForgotPassword && (
           <>
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="auth-input"
-            />
-            {isSignUp && (
+            <div className="password-container">
               <input
-                type="password"
-                placeholder="Confirm Password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
+                type={showPassword ? "text" : "password"}  // showPassword state'ine göre parola tipi değişiyor
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="auth-input"
               />
+              <button
+                type="button"
+                className="password-toggle"
+                onClick={() => setShowPassword(!showPassword)} // Parola görünürlük kontrolü
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
+            </div>
+            {isSignUp && (
+              <div className="password-container">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Confirm Password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  className="auth-input"
+                />
+                <button
+                  type="button"
+                  className="password-toggle"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? "Hide" : "Show"}
+                </button>
+              </div>
             )}
           </>
         )}

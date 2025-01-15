@@ -24,7 +24,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background: url('../assets/arkaplan.png') no-repeat center center fixed; /* Arka plan görseli */
   background-size: 1000px; /* Görselin tüm alanı kaplamasını sağlar */
   background-position: center center; /* Görseli ortalar */
   color: white; /* Metin rengi */
@@ -101,4 +100,24 @@ body {
   padding: 10px; /* İç boşluk */
   border-radius: 5px; /* Yuvarlatılmış köşeler */
   text-align: center; /* Metni ortala */
+}
+
+/* Parola Görünürlük Butonu */
+.password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #f39c12;
+  cursor: pointer;
+}
+
+.password-toggle:hover {
+  color: #e67e22;
 }

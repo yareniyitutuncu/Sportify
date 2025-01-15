@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';  // Firebase signOut fonksiyonunu import ediyoruz
+import { auth } from '../firebase';  // Firebase auth'u import ediyoruz
 import './Header.css'; // Header stil dosyasını import ediyoruz
 
-const Header = ({ title, backButton }) => {
+const Header = ({ title, backButton, exitButton }) => {
   const navigate = useNavigate();
   const [openNotifications, setOpenNotifications] = useState(false);
   const [notifications] = useState([
@@ -10,13 +12,22 @@ const Header = ({ title, backButton }) => {
     "New updates are available. Update your app!",
     "Don't forget to stay hydrated, drink some water!"
   ]);
-  
+
   const toggleNotifications = () => {
     setOpenNotifications(!openNotifications);
   };
 
   const handleBack = () => {
     navigate('/home'); // Back butonuna tıklanınca Home sayfasına yönlendirilecek
+  };
+
+  const handleExit = async () => {
+    try {
+      await signOut(auth);  // Firebase'den çıkış yapıyoruz
+      navigate('/auth');  // Çıkış yaptıktan sonra AuthPage'e yönlendiriyoruz
+    } catch (error) {
+      console.error("Exit failed: ", error);
+    }
   };
 
   return (
@@ -37,6 +48,11 @@ const Header = ({ title, backButton }) => {
         {backButton && (
           <button className="back-btn" onClick={handleBack}>
             Back
+          </button>
+        )}
+        {exitButton && (
+          <button className="exit-btn" onClick={handleExit}>
+            Exit
           </button>
         )}
         {/* Bildirim Butonu */}

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { db, setDoc, doc, getDoc } from "../firebase"; // Firebase importları
+import { getAuth } from "firebase/auth";  // Firebase auth import
 import "./Calendar.css";
 import Header from './Header'; // Header bileşenini import ediyoruz
 
 const Calendar = () => {
+  const auth = getAuth();
   const [selectedDate, setSelectedDate] = useState(null);
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -41,10 +43,11 @@ const Calendar = () => {
 
     // Görev tarihi formatını oluşturuyoruz (day-month-year)
     const taskDate = `${selectedDate}-${currentMonth + 1}-${currentYear}`;
+    const userId = auth.currentUser.uid;  // Kullanıcı ID'sini alıyoruz
 
-    // Veriyi Firebase'e kaydediyoruz
+    // Veriyi Firebase'e kaydediyoruz (Kullanıcı ID'sine göre kaydediyoruz)
     try {
-      await setDoc(doc(db, "tasks", taskDate), {
+      await setDoc(doc(db, "tasks", userId, "taskDates", taskDate), {
         tasks: [...(tasks[taskDate] || []), newTask], // Yeni görev ekliyoruz
       });
       setTasks({
@@ -60,10 +63,11 @@ const Calendar = () => {
   // Görev silme işlemi
   const handleDeleteTask = async (taskIndex, taskDate) => {
     const updatedTasks = tasks[taskDate].filter((_, index) => index !== taskIndex);
+    const userId = auth.currentUser.uid;  // Kullanıcı ID'sini alıyoruz
 
     // Silinen görevi Firebase'den güncelliyoruz
     try {
-      await setDoc(doc(db, "tasks", taskDate), { tasks: updatedTasks });
+      await setDoc(doc(db, "tasks", userId, "taskDates", taskDate), { tasks: updatedTasks });
       setTasks({
         ...tasks,
         [taskDate]: updatedTasks, // Firestore'dan sonra local state'i güncelle
@@ -79,7 +83,8 @@ const Calendar = () => {
 
     const fetchTasks = async () => {
       const taskDate = `${selectedDate}-${currentMonth + 1}-${currentYear}`;
-      const taskDocRef = doc(db, "tasks", taskDate);
+      const userId = auth.currentUser.uid;  // Kullanıcı ID'sini alıyoruz
+      const taskDocRef = doc(db, "tasks", userId, "taskDates", taskDate);
       
       try {
         const taskDoc = await getDoc(taskDocRef);

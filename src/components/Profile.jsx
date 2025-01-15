@@ -121,7 +121,7 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <Header backButton={true} title="Profile" />
+      <Header backButton={true} title="Profile" exitButton={true} /> {/* Sadece Profil sayfasında Exit butonunu göstermek için exitButton=true */}
 
       <div className="profile-info">
         <div className="profile-header">

@@ -1,5 +1,8 @@
+/* Genel stil */
 .recipe-detail-container {
   padding: 20px;
+  margin-top: 100px;
+
   color: white;
   background-color: #1f1f1f;
 }
@@ -11,6 +14,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   max-width: 1000px;
+  min-height: 600px; /* Sabit yükseklik */
 }
 
 .recipe-header {
@@ -54,6 +58,11 @@
 
 .recipe-content {
   margin-top: 20px;
+  height: 400px; /* Sabit yükseklik */
+  overflow-y: auto; /* İçerik taşarsa kaydırma ekler */
+  padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
 }
 
 .recipe-content h3 {
@@ -76,21 +85,23 @@
 .recipe-content .overview, 
 .recipe-content .ingredients,
 .recipe-content .directions {
-  min-height: 200px; /* Sabit yükseklik */
+  height: 300px; /* Sabit yükseklik veriyoruz */
   padding: 20px;
   background-color: #333;
   border-radius: 8px;
   margin-bottom: 20px;
+  overflow-y: auto; /* İçerik taşarsa kaydırma ekler */
+  color: #bbb;
 }
 
 .recipe-content .overview {
-  min-height: 200px;
+  min-height: 300px;
 }
 
 .recipe-content .ingredients {
-  min-height: 200px;
+  min-height: 300px;
 }
 
 .recipe-content .directions {
-  min-height: 200px;
+  min-height: 300px;
 }

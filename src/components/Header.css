@@ -107,3 +107,19 @@ body {
   font-size: 1.3rem;
 }
 }
+
+/* Exit Butonu */
+.exit-btn {
+  background-color: #e74c3c; /* Kırmızı arka plan */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.exit-btn:hover {
+  background-color: #c0392b; /* Hoverda daha koyu kırmızı */
+}
